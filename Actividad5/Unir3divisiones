@@ -1,0 +1,16 @@
+#Codigo para unir las 3 partes del dataset
+# Read the three CSV files back into DataFrames
+df_part1_loaded = pd.read_csv('Hawaii_limpio4_part1.csv')
+df_part2_loaded = pd.read_csv('Hawaii_limpio4_part2.csv')
+df_part3_loaded = pd.read_csv('Hawaii_limpio4_part3.csv')
+
+# Concatenate the three DataFrames
+df = pd.concat([df_part1_loaded, df_part2_loaded, df_part3_loaded])
+
+# Display the head of the combined DataFrame to verify
+print("Combined DataFrame head:")
+display(df_combined.head())
+
+# Optional: Display the shape of the combined DataFrame to verify the total number of rows
+print("\nCombined DataFrame shape:")
+print(df_combined.shape)
